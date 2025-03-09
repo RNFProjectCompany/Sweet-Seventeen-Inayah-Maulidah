@@ -1,0 +1,196 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0 !important;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.font-esthetic {
+    font-family: 'Sacramento', cursive !important;
+    color: #ffffff !important;
+}
+
+.font-arabic {
+    font-family: 'Noto Naskh Arabic', serif !important;
+    color: #ffffff !important;
+}
+
+.img-crop {
+    width: 14rem;
+    height: 14rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.img-crop>img {
+    display: inline;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+}
+
+.btn-music {
+    position: fixed;
+    bottom: 9vh;
+    right: 2vh;
+    z-index: 1055;
+}
+
+.loading-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111111;
+    z-index: 1056 !important;
+}
+
+.card-body {
+    overflow-wrap: break-word !important;
+}
+
+.mouse-animation {
+    padding: 0.25rem 0.625rem;
+    height: 2rem;
+    border: 0.1rem solid #ffffff;
+    border-radius: 1.4rem;
+    opacity: 0.75;
+    box-sizing: content-box;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+}
+
+.mouse-animation>.scroll-animation {
+    width: 0.25rem;
+    height: 0.625rem;
+    border-radius: 25%;
+    background-color: #ffffff;
+    animation-name: scroll;
+    animation-duration: 2.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.dark-section {
+    background-color: #111111 !important;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+footer {
+    background-color: #111111 !important;
+    margin-top: -5px;
+    padding-bottom: 4rem;
+}
+
+.card {
+  width: 470px;
+  height: 300px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+  transition: 1s;
+}
+.card:hover {
+  transform: rotate(-5deg);
+}
+.card:hover .outside {
+  transform: rotateY(-130deg);
+}
+.outside,
+.inside {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  left: 50.1%;
+}
+.inside {
+  background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
+  line-height: 3;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  left: 50%;
+}
+.outside {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  z-index: 1;
+  transform-origin: left;
+  transition: 2s;
+  cursor: pointer;
+}
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+}
+.front {
+  background-color: #ffffff;
+}
+.back {
+  transform: rotateY(180deg);
+  background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
+}
+.cake {
+  width: 100%;
+  position: absolute;
+  bottom: 30px;
+}
+.sampul {
+    position: relative;
+    top: 100px;
+    right: 30px;
+}
+.outside p {
+  font-size: 23px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  text-align: center;
+  letter-spacing: 6px;
+  color: #000046;
+}
+.outside .summary {
+    font-size: 10px;
+    letter-spacing: 0;
+    margin-top: -10px;
+}
+.inside p {
+    font-size: 10px;
+    color: black;
+}
